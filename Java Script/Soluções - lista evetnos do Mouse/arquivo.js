@@ -143,10 +143,108 @@
 // function mostrarMensagem(){
 //     console.log('Essa msg a ser mostrada:')
 // }
+// function mostrarMensagem()  {
+//     console.log('Essa msg a ser mostrada:')
+// }
 
-// setInterval(mostrarMensagem,1000)
+// // setInterval(mostrarMensagem,1000)
 
-setInterval(console.log('Essa msg a ser mostrada:'),1000)
+// setInterval(() => {
+//     console.log('Essa msg a ser mostrada:')
+// },1000)
+
+// document.addEventListener('click',(evento)=>{
+
+// })
+
+// document.addEventListener('click',function(evento){
+
+// })
+// let peso = 4
+
+// switch (peso) {
+//     case 1:
+//     case 2:
+//     case 3:
+//     case 4:
+//         alert("O valor é 10R$")
+//         break;  
+//     case 5:
+//     case 6:
+//     case 7:
+//     case 8:
+//     case 9:
+//     case 10:
+//         alert("O valor é 20R$")
+//         break;
+//     default:
+//         alert("O valor é 30R$")
+//         break;
+// }
+
+// if(peso <= 5){
+//     alert("O valor é 10R$")
+// }
+// else{
+//     if(peso > 5 & peso <=10){
+//         alert("O valor é 20R$")
+//     }
+//     else{
+//         if(peso < 1){
+//             alert("Peso inválido")
+//         }
+//         else{
+//             alert("O valor é 30R$")
+//         }
+        
+//     }
+// // }
+
+// let numeros = [3,5,6,7,8,9]
+// let numerosDuplicados = []
+// numeros.forEach(elemento => {
+//     numerosDuplicados.push(elemento * 2)
+  
+// });
+
+// console.log(numerosDuplicados.toString())
+
+
+// let numerosInteiros = [3,5,6,7,8,9]
+// let numerosEmString = []
+// numerosInteiros.forEach(elemento => {
+//     numerosEmString.push(elemento.toString())
+  
+// });
+
+// console.log(numerosEmString.toString())
+
+
+let numeros2 = [3,5,6,4,7,8,4,9]
+let numeroBuscado = 4
+let quantidadeVezesNumeroBuscado = 0
+numeros2.forEach(elemento => {
+    if(numeroBuscado === elemento){
+        quantidadeVezesNumeroBuscado ++
+    }
+    
+});
+
+0
+0
+0
+1
+1
+1
+2
+2
+
+
+
+
+
+
+
 
 
 
