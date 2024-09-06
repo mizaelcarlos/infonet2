@@ -220,24 +220,150 @@
 // console.log(numerosEmString.toString())
 
 
-let numeros2 = [3,5,6,4,7,8,4,9]
-let numeroBuscado = 4
-let quantidadeVezesNumeroBuscado = 0
-numeros2.forEach(elemento => {
-    if(numeroBuscado === elemento){
-        quantidadeVezesNumeroBuscado ++
-    }
+// let numeros2 = [3,5,6,4,7,8,4,9]
+// let numeroBuscado = 4
+// let quantidadeVezesNumeroBuscado = 0
+// numeros2.forEach(elemento => {
+//     if(numeroBuscado === elemento){
+//         quantidadeVezesNumeroBuscado ++
+//     }
     
-});
+// });
 
-0
-0
-0
-1
-1
-1
-2
-2
+// console.log(quantidadeVezesNumeroBuscado)
+
+
+
+
+
+
+
+
+// let precos = [200,450,800,1200,670]
+// let novosPrecos = []
+
+// precos.forEach(precoAtual => {
+//     let desconto = precoAtual * 0.10
+//     novosPrecos.push(precoAtual - desconto)
+// });
+
+// var nome = document.getElementById('nome').value
+
+// saudacao(nome)
+
+
+// function saudacao(nome){
+//     console.log('Olá coleguinha ' + nome + 'como vai?')
+// }
+
+
+// const mensagens = ["Mensagem 1","Mensagem 2","Mensagem 3","Mensagem 4"];
+
+
+// function atualizarMensagem() {
+//     let div = document.getElementById('mensagem');
+//     let index = Math.floor(Math.random() * mensagens.length);
+//     div.textContent = mensagens[index];
+// }
+
+
+// setInterval(atualizarMensagem, 4000);
+
+// let segundos = 11
+// let intervalo = setInterval(() => {
+//     segundos --
+//     console.log(segundos)
+//     if(segundos == 0){
+//         clearInterval(intervalo)
+//     }
+// }, 1000);
+
+
+
+
+// let Segundos = 11
+
+// while(Segundos > 0){
+//     Segundos --
+//     console.log(Segundos)
+// }
+
+// let mensagem = 'Tecla A pressionada!'
+
+// document.addEventListener('keypress',function(event){
+//     if(event.key == 'A' || event.key == 'a'){
+//         alert(mensagem)
+//     }
+// })
+
+
+// document.addEventListener('keydown',function(event){
+//     console.log(event.key)
+// })
+
+let paragrafo = document.getElementById('tecla')
+
+// document.addEventListener('keypress',function(event){
+//     let tecla = event.key
+//     let conteudoParagrafo = paragrafo.textContent
+//     paragrafo.textContent = conteudoParagrafo + tecla
+// })
+
+// let corpoPagina = document.getElementsByTagName('body')[0]
+
+// corpoPagina.addEventListener('keypress',function(event){
+//     let tecla = event.key
+//     let conteudoParagrafo = paragrafo.textContent
+//     paragrafo.textContent = conteudoParagrafo + tecla
+// })
+
+// var contagem = document.getElementById('contagem')
+// var btn = document.getElementById('incrementar')
+
+// var contador = 0
+
+// function atualizarContagem(){
+//     contador ++
+//     contagem.textContent = contador
+// }
+
+// setInterval(atualizarContagem,3000)
+
+// function exibirMsgAlerta(){
+//     alert('Essa mesg a ser exibida após 3 segundos')
+// }
+
+// setTimeout(() => {
+//     alert('Essa mesg a ser exibida após 3 segundos')
+// },3000)
+
+
+// setTimeout(function(){
+//     alert('Essa mesg a ser exibida após 3 segundos')
+// },3000)
+
+// setTimeout(exibirMsgAlerta,3000)
+
+// setTimeout(()=>{
+//     let div = document.getElementById('texto')
+//     div.textContent = 'Hoje o Hicaro foi o campeão do Teken 5'
+// },5000)
+
+setInterval(()=>{
+    let div = document.getElementById('texto')
+    div.textContent += 'Hoje o Hicaro foi o campeão do Teken 5 |'
+},5000)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
