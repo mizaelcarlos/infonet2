@@ -27,4 +27,4 @@ Inclua uma linha de cabeçalho com títulos descritivos.
 
 15. Desenvolva uma tabela com três colunas: um cabeçalho para "Data", outro para "Evento" e o último para "Local". Preencha com dados fictícios de eventos.
 
-16.Crie uma tabela com uma linha de cabeçalhos e três linhas de dados. Utilize o atributo scope nos cabeçalhos para definir a abrangência dos cabeçalhos nas linhas e colunas.
+16. Crie uma tabela com uma linha de cabeçalhos e três linhas de dados. Utilize o atributo scope nos cabeçalhos para definir a abrangência dos cabeçalhos nas linhas e colunas.
