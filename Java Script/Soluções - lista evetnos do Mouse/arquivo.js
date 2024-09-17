@@ -344,15 +344,15 @@ let paragrafo = document.getElementById('tecla')
 
 // setTimeout(exibirMsgAlerta,3000)
 
-// setTimeout(()=>{
-//     let div = document.getElementById('texto')
-//     div.textContent = 'Hoje o Hicaro foi o campeão do Teken 5'
-// },5000)
-
-setInterval(()=>{
+setTimeout(()=>{
     let div = document.getElementById('texto')
-    div.textContent += 'Hoje o Hicaro foi o campeão do Teken 5 |'
+    div.textContent = 'Hoje o Hicaro foi o campeão do Teken 5'
 },5000)
+
+// setInterval(()=>{
+//     let div = document.getElementById('texto')
+//     div.textContent += 'Hoje o Hicaro foi o campeão do Teken 5 |'
+// },5000)
 
 
 
