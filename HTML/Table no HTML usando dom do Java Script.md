@@ -1,5 +1,5 @@
 
-<body>
+
     <table id="brasileirao">
         <thead>
             <tr>
@@ -40,5 +40,5 @@
             });
         });
     </script>
-</body>
+
 
