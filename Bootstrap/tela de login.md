@@ -1,14 +1,5 @@
 ´´´ HTML
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
     
     <div class="row justify-content-md-center">
         <div class="col-md-4"> 
@@ -35,9 +26,3 @@
             </div>
         </div>
       </div>
-      
-
-    <script src="popper.min.js"></script>
-    <script src="jquery-3.3.1.slim.min.js"></script>
-</body>
-</html>
