@@ -1,4 +1,6 @@
+```html
 #### 1. Estrutura Básica: Crie uma página HTML básica usando o Bootstrap. Inclua o título "Minha Página Bootstrap" no '<head>' e um '<h1>' no corpo da página.
+```
 
 #### 2. Navbar: Adicione uma barra de navegação (navbar) no topo da página. A navbar deve conter três itens: "Home", "Sobre", "Contato".
 
