@@ -54,7 +54,14 @@ ALTER TABLE clientes MODIFY telefone VARCHAR(15);
 
 
 Inserir uma chave estrangeira
-ALTER TABLE nome_tabela ADD CONSTRAINT nome_constraint FOREIGN KEY (coluna_filha) REFERENCES tabela_referenciada(coluna_referenciada);
+ALTER TABLE emprestimo ADD membro_cpf varchar(11);
+ALTER TABLE emprestimo ADD CONSTRAINT fk_emprestimo_01 FOREIGN KEY (membro_cpf) REFERENCES membro (cpf);
+
+Inserir dados
+
+insert into paciente (cpf,nome,endereco,data_nascimento) values ('03019076458','Vanusa','Jockey n 234','1998-10-31');
+
+insert into paciente (cpf,nome,endereco,data_nascimento,valor) values ('03019076458','Vanusa','Jockey n 234','1998-10-31',25.67);
 
 
 insert into cliente (id, nome, endereco)
