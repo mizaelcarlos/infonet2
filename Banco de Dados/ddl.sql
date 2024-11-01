@@ -57,3 +57,13 @@ Inserir uma chave estrangeira
 ALTER TABLE nome_tabela ADD CONSTRAINT nome_constraint FOREIGN KEY (coluna_filha) REFERENCES tabela_referenciada(coluna_referenciada);
 
 
+insert into cliente (id, nome, endereco)
+values (2,'Andé','Rua 23 quadra 15');
+
+update cliente 
+set nome = 'André',
+endereco = 'Rua 75 quadra 25' 
+where id = 2;
+
+delete from cliente where id = 2;
+
