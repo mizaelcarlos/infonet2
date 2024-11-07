@@ -1,3 +1,6 @@
+![image](https://github.com/user-attachments/assets/de64d87b-a194-4107-a6fe-b06292d6807a)
+
+
 #### 1 - selecionar todos os dados da tabela clientes:
 
 
