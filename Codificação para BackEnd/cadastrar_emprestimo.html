@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Empréstimo</title>
+  <link rel="stylesheet" href="style.css"> <!-- Supondo que você tenha um arquivo CSS -->
+</head>
+<body>
+  <h1>Formulário de Empréstimo</h1>
+  <form action="processar_cadastro.php" method="POST">
+    <div>
+      <label for="id">ID do Empréstimo:</label>
+      <input type="number" id="id" name="id" required>
+    </div>
+
+    <div>
+      <label for="data_retirada">Data de Retirada:</label>
+      <input type="date" id="data_retirada" name="data_retirada" required>
+    </div>
+
+    <div>
+      <label for="data_devolucao">Data de Devolução:</label>
+      <input type="date" id="data_devolucao" name="data_devolucao" required>
+    </div>
+
+    <div>
+      <label for="multa">Multa (R$):</label>
+      <input type="number" id="multa" name="multa" step="0.01" min="0" required>
+    </div>
+
+    <div>
+      <label for="membro_cpf">CPF do Membro:</label>
+      <input type="text" id="membro_cpf" name="membro_cpf" pattern="\d{11}" required placeholder="Somente números (ex: 12345678901)">
+    </div>
+
+    <div>
+      <button type="submit">Salvar</button>
+    </div>
+  </form>
+</body>
+</html>
