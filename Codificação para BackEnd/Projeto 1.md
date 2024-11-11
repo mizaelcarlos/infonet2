@@ -1,4 +1,4 @@
-### Criar projeto com seguinte estrutura:
+### Criar projeto backend com seguinte estrutura:
 
 ```plaintext
 projeto/
@@ -22,6 +22,8 @@ projeto/
 │   ├── cadastro_produto.php
 │   └── lista_pedidos.php
 └── index.php
+
+```plaintext
 
 ### - Onde as classes terão que persistir os objetos no banco de dados.
 
