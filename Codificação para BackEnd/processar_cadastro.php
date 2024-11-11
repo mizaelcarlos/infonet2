@@ -2,7 +2,7 @@
 
 include('Emprestimo.php');
 
-$id = $_POST['id'];
+$id = $_REQUEST['id'];
 $data_retirada = $_POST['data_retirada'];
 $data_devolucao = $_POST['data_devolucao'];
 $multa = $_POST['multa'];

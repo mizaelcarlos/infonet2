@@ -3,7 +3,7 @@
 // Definição da classe Carro
 class Carro {
     // Propriedades (atributos) da classe
-    private $marca;
+    public $marca;
     private $modelo;
     private $ano;
 
