@@ -23,7 +23,7 @@ projeto/
 │   └── lista_pedidos.php
 └── index.php
 
-```plaintext
+```
 
 ### - Onde as classes terão que persistir os objetos no banco de dados.
 
