@@ -5,6 +5,17 @@
 include('Emprestimo.php');
 include('Carro3.php');
 include('ContaBancaria.php');
+include('Pessoa.php');
+include('Cachorro.php');
+
+// $pessoa = new Pessoa();
+// $pessoa->setNome('Hicaro');
+// $pessoa->setIdade(22);
+// echo $pessoa->getIdade();
+
+echo Pessoa::montaCabecalho();
+
+echo Cachorro::latir();
 
 // $emprestimo1 = new Emprestimo(1,'2024-11-07','2024-11-10','2024-11-15',0,'03019076331');
 // $emprestimo1->getId();
@@ -15,28 +26,28 @@ include('ContaBancaria.php');
 // $carro_onix->setModelo('Onix Joy');
 // $carro_onix->setAno(2019);
 
-$conta_bancaria_maria_eduarda = new ContaBancaria('Maria Eduarda');
-echo '<p>'.$conta_bancaria_maria_eduarda->extrato().'</p>';
-$conta_bancaria_maria_eduarda->depositar(500);
-echo '<p>'.$conta_bancaria_maria_eduarda->extrato().'</p>';
-$conta_bancaria_maria_eduarda->sacar(400);
-echo '<p>'.$conta_bancaria_maria_eduarda->extrato().'</p>';
+// $conta_bancaria_maria_eduarda = new ContaBancaria('Maria Eduarda');
+// echo '<p>'.$conta_bancaria_maria_eduarda->extrato().'</p>';
+// $conta_bancaria_maria_eduarda->depositar(500);
+// echo '<p>'.$conta_bancaria_maria_eduarda->extrato().'</p>';
+// $conta_bancaria_maria_eduarda->sacar(400);
+// echo '<p>'.$conta_bancaria_maria_eduarda->extrato().'</p>';
 
 
 
 ?>
 
-<table>
+<!-- <table>
     <thead>
         <th>Marca</th>
         <th>Modelo</th>
         <th>Ano</th>
     </thead>
 
-    <tbody>
-        <td><?php //echo $carro_onix->getMarca();?></td>
+    <tbody> -->
+        <!-- <td><?php //echo $carro_onix->getMarca();?></td>
         <td><?php //echo $carro_onix->getModelo();?></td>
         <td><?php //echo $carro_onix->getAno();?></td>
     </tbody>
-</table>
+</table> -->
 

@@ -1,0 +1,13 @@
+.cabecalhos{
+    font-size: 16px;
+    background-color: brown;
+}
+
+.paragrafo{
+    background-color: blue;
+}
+
+.saldo{
+    background-color: red;
+    font-size: 50px;
+}
