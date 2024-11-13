@@ -33,6 +33,8 @@ Você deverá ver a tela a seguir:
 
 para fazer conexão do banco de dados com o projeto , edite as seguinte informações do arquivo .env abaixo:
 
+Crie o banco de dados no mysql com o nome sistema_os
+
 <pre class="language-php">
   <code class="language-php">
     DB_CONNECTION=mysql
