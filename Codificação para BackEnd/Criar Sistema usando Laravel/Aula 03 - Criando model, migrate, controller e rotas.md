@@ -80,9 +80,9 @@ Abra o model Produto no diretório app/Models e insira o código seguinte abaixo
 
 <pre class="language-php">
   <code class="language-php">
-    <?php
+    
 
-namespace App\Models;
+    namespace App\Models;
 
     use Illuminate\Database\Eloquent\Factories\HasFactory;
     use Illuminate\Database\Eloquent\Model;
