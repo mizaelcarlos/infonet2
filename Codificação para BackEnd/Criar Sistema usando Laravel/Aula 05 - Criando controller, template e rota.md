@@ -39,7 +39,7 @@ e dentro da pasta produto vamos ciar um arquivo chamado de index.blade.php com o
 
 <pre class="language-php">
   <code class="language-php">
-		´´´HTML
+		```markdown
 		<!DOCTYPE html>
 		<html lang="en">
 		<head>
@@ -51,6 +51,7 @@ e dentro da pasta produto vamos ciar um arquivo chamado de index.blade.php com o
 			<h1>Listagem de produtos</h1>
 		</body>
 		</html>
+		```markdown
   </code>
 </pre>
 

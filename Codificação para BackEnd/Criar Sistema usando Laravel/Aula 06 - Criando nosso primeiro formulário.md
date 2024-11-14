@@ -38,7 +38,7 @@ e dentro da pasta produto vamos ciar um arquivo chamado de cadastrar.blade.php c
 
 <pre class="language-php">
   <code class="language-php">
-		´´´HTML
+		```markdown
 		<!DOCTYPE html>
 		<html lang="en">
 		<head>
@@ -62,6 +62,7 @@ e dentro da pasta produto vamos ciar um arquivo chamado de cadastrar.blade.php c
 			</form>
 		</body>
 		</html>
+		```markdown
   </code>
 </pre>
 
