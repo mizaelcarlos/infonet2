@@ -10,7 +10,6 @@ Onde sistema_os será o nome do projeto
 
 
 
-
 Para iniciar o servidor, execute o seguinte comando, que roda o servidor de aplicativos na porta 8000:
 
 <pre class="language-php">

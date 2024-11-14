@@ -1,4 +1,35 @@
-Criar uma migration para criar uma tabela
+Criar uma migration para criar uma tabela chamada categoria
+
+<pre class="language-php">
+  <code class="language-php">
+    php artisan make:migration create_produto_table --create=produto
+  </code>
+</pre>
+
+Será criado no diretório database/migrations com um nome semelhante a:
+
+2024_07_25_134630_create_produto_table.php
+
+Para inserir a coluna nome use a variáveil abaixo:
+
+<pre class="language-php">
+  <code class="language-php">
+    public function up(): void
+    {
+        Schema::create('produto', function (Blueprint $table) {
+            $table->id();
+            $table->string('nome');
+            $table->float('valor');
+            $table->text('descricao')->nullable();
+            $table->date('data_validade');
+            $table->boolean('ativo')->nullable();
+            $table->timestamps();
+        });
+    }
+  </code>
+</pre>
+
+Criar uma migration para criar uma tabela chamada categoria
 
 <pre class="language-php">
   <code class="language-php">
@@ -8,19 +39,17 @@ Criar uma migration para criar uma tabela
 
 Será criado no diretório database/migrations com um nome semelhante a:
 
-2024_07_25_134630_create_produtos_table.php
+2024_07_25_134630_create_categoria_table.php
 
-Para inserir as colunas nome, valor e descrição , use as variáveis abaixo:
+Para inserir a coluna nome use a variáveil abaixo:
 
 <pre class="language-php">
   <code class="language-php">
     public function up(): void
     {
-        Schema::create('produtos', function (Blueprint $table) {
+        Schema::create('categoria', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->integer('valor');
-            $table->longText('descricao');
             $table->timestamps();
         });
     }
@@ -36,13 +65,6 @@ para aplicar as alterações no banco de dados relacionado a migrate acima, rode
 <pre class="language-php">
   <code class="language-php">
      php artisan migrate
-  </code>
-</pre>
-
-
-<pre class="language-php">
-  <code class="language-php">
-    php artisan key:generate
   </code>
 </pre>
 
@@ -97,7 +119,7 @@ para aplicar as alterações no banco de dados relacionado a migrate acima, rode
   </code>
 </pre>
 
-Para adiconar chave estrangeira e uma tabela crie uma nova migration e insira um código abaixo:
+Para adiconar chave estrangeira na tabela produto crie uma nova migration e insira um código abaixo:
 
 <pre class="language-php">
   <code class="language-php">
