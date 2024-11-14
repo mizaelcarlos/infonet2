@@ -37,13 +37,17 @@ Vamos criar o método index
 para que o método index reotorne a view 'produto.index' , teremos que criar uma pasta chamada produto dentro de resources/views ,
 e dentro da pasta produto vamos ciar um arquivo chamado de index.blade.php com o seguinte conteúdo:
 
-<pre class="language-php">
-  <code class="language-php">
+		
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Document</title>
+		</head>
 		<body>
 			<h1>Listagem de produtos</h1>
 		</body>
-  </code>
-</pre>
+		</html>
+
 
 Para que esse  template fique acessível através de uma url a ser acessado no navegador, vamos criar uma rota nova no arquivo routes/web.php
 

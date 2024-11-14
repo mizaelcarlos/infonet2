@@ -36,9 +36,12 @@ Vamos criar o método cadastrar
 para que o método cadastrar reotorne a view 'produto.cadastrar' , teremos que criar uma pasta chamada produto dentro de resources/views ,
 e dentro da pasta produto vamos ciar um arquivo chamado de cadastrar.blade.php com o seguinte conteúdo:
 
-<pre class="language-php">
-  <code class="language-php">
 		
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Document</title>
+		</head>
 		<body>
 			<form action="{{ route('produto.store') }}" method="post">
 				@csrf
@@ -54,9 +57,7 @@ e dentro da pasta produto vamos ciar um arquivo chamado de cadastrar.blade.php c
 				<button type="submit">Salvar</button>
 			</form>
 		</body>
-		
-  </code>
-</pre>
+
 
 Para que esse  template fique acessível através de uma url a ser acessado no navegador, vamos criar uma rota nova no arquivo routes/web.php
 
