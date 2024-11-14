@@ -39,19 +39,9 @@ e dentro da pasta produto vamos ciar um arquivo chamado de index.blade.php com o
 
 <pre class="language-php">
   <code class="language-php">
-		```markdown
-		<!DOCTYPE html>
-		<html lang="en">
-		<head>
-			<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>Document</title>
-		</head>
 		<body>
 			<h1>Listagem de produtos</h1>
 		</body>
-		</html>
-		```markdown
   </code>
 </pre>
 

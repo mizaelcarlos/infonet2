@@ -38,14 +38,7 @@ e dentro da pasta produto vamos ciar um arquivo chamado de cadastrar.blade.php c
 
 <pre class="language-php">
   <code class="language-php">
-		```markdown
-		<!DOCTYPE html>
-		<html lang="en">
-		<head>
-			<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>Document</title>
-		</head>
+		
 		<body>
 			<form action="{{ route('produto.store') }}" method="post">
 				@csrf
@@ -61,8 +54,7 @@ e dentro da pasta produto vamos ciar um arquivo chamado de cadastrar.blade.php c
 				<button type="submit">Salvar</button>
 			</form>
 		</body>
-		</html>
-		```markdown
+		
   </code>
 </pre>
 
