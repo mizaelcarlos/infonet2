@@ -1,3 +1,5 @@
+Passo 1:
+
 Começamos criando uma migration para criar a tabela que queremos que seja criada no banco de dados.
 
 Vamos criar a migration para a tabela de cliente
@@ -29,6 +31,8 @@ Edite o arquivo criado inserindo as colunas que vão compor a tabela
   </code>
 </pre>
 
+Passo 2:
+
 Próximo passo é criar o model para essa tabela cliente:
 
 Para criar o model use o comando abaixo
@@ -46,6 +50,8 @@ No model Cliente.php , inserir o código abaixo:
 protected $fillable = ['nome', 'data_nascimento', 'foto''];
 
 Ele se refere aos campos prenchiveis, que serão utilizados no cadastro de um cliente.
+
+Passo 3: 
 
 Agora vamos criar o nosso controller de cliente, para criar rode o comando abaixo no terminal:
 
@@ -65,10 +71,10 @@ Vamos editar o método index
 		namespace App\Http\Controllers;
 
 		use Illuminate\Http\Request;
-		use App\Models\Produto;
+		use App\Models\Cliente;
 
 
-		class ProdutoController extends Controller
+		class ClienteController extends Controller
 		{
 			//
 			public function index(){
@@ -83,7 +89,9 @@ Vamos editar o método index
   </code>
 </pre>
 
-para que o método index reotorne a view 'cliente.index' , teremos que criar uma pasta chamada cliente dentro de resources/views ,
+Passo 5:
+
+para que o método index retorne a view 'cliente.index' , teremos que criar uma pasta chamada cliente dentro de resources/views ,
 e dentro da pasta cliente vamos ciar um arquivo chamado de index.blade.php com o seguinte conteúdo:
 
 		
@@ -97,6 +105,7 @@ e dentro da pasta cliente vamos ciar um arquivo chamado de index.blade.php com o
 		</body>
 		</html>
 
+Passo 6:
 
 Para que esse  template fique acessível através de uma url a ser acessado no navegador, vamos criar uma rota nova no arquivo routes/web.php
 
@@ -104,18 +113,20 @@ Para que esse  template fique acessível através de uma url a ser acessado no n
   <code class="language-php">
 	
 	use Illuminate\Support\Facades\Route;
-	use App\Http\Controllers\ProdutoController;
+	use App\Http\Controllers\ClienteController;
 
 
 	Route::get('/', function () {
 		return view('welcome');
 	});
 
-	Route::get('/cliente/listar',[ProdutoController::class,'index'])->name('cliente.index');
+	Route::get('/cliente/listar',[ClienteController::class,'index'])->name('cliente.index');
   </code>
 </pre>
 
-No controller ProdutoController.php no diretório App/Http/Controllers
+Passo 7:
+
+No controller ClienteController.php no diretório App/Http/Controllers
 
 Vamos editar o método create 
 
@@ -125,15 +136,15 @@ Vamos editar o método create
 		namespace App\Http\Controllers;
 
 		use Illuminate\Http\Request;
-		use App\Models\Produto;
+		use App\Models\Cliente;
 
 
-		class ProdutoController extends Controller
+		class ClienteController extends Controller
 		{
 			//
 			public function index(){
 
-				return view('produto.index');
+				return view('cliente.index');
 			}
 			
 			public function create(){
@@ -147,6 +158,8 @@ Vamos editar o método create
  
   </code>
 </pre>
+
+Passo 8:
 
 para que o método cadastrar reotorne a view 'cliente.cadastrar' , na pasta chamada cliente dentro de resources/views ,
 vamos ciar um arquivo chamado de cadastrar.blade.php com o seguinte conteúdo:
@@ -171,6 +184,7 @@ vamos ciar um arquivo chamado de cadastrar.blade.php com o seguinte conteúdo:
 			</form>
 		</body>
 
+Passo 9:
 
 Para que esse  template fique acessível através de uma url a ser acessado no navegador, vamos criar uma rota nova no arquivo routes/web.php
 
@@ -178,17 +192,19 @@ Para que esse  template fique acessível através de uma url a ser acessado no n
   <code class="language-php">
 	
 	use Illuminate\Support\Facades\Route;
-	use App\Http\Controllers\ProdutoController;
+	use App\Http\Controllers\ClienteController;
 
 
 	Route::get('/', function () {
 		return view('welcome');
 	});
 
-	Route::get('/cliente/listar',[ProdutoController::class,'index'])->name('cliente.index');
-	Route::get('/cliente/cadastrar',[ProdutoController::class,'cadastrar']);
+	Route::get('/cliente/listar',[ClienteController::class,'index'])->name('cliente.index');
+	Route::get('/cliente/cadastrar',[ClienteController::class,'cadastrar']);
   </code>
 </pre>
+
+Passo 10:
 
 Sempre ao criar  uma nova rota , deverá se removido cache das rotas , use  o comando a seguir
 
@@ -197,6 +213,8 @@ Sempre ao criar  uma nova rota , deverá se removido cache das rotas , use  o co
     php artisan route:cache
   </code>
 </pre>
+
+Passo 11:
 
 No controller ClienteController.php no diretório App/Http/Controllers
 
@@ -210,7 +228,7 @@ Vamos criar o método store, ele irá receber os dados vindo do formulário que 
 		use App\Models\Cliente;
 
 
-		class ProdutoController extends Controller
+		class ClienteController extends Controller
 		{
 			//
 			public function index(){
@@ -234,6 +252,8 @@ Vamos criar o método store, ele irá receber os dados vindo do formulário que 
   </code>
 </pre>
 
+Passo 12:
+
 Para que a  action do formulário do template views/cliente/cadastrar.blade.php que aponta para essa rota route('cliente.store') funcione , precisamos inserir a  rota
 no arquivo routes/web.php
 
@@ -241,7 +261,7 @@ no arquivo routes/web.php
   <code class="language-php">
 	
 	use Illuminate\Support\Facades\Route;
-	use App\Http\Controllers\ProdutoController;
+	use App\Http\Controllers\ClienteController;
 
 
 	Route::get('/', function () {
@@ -254,6 +274,7 @@ no arquivo routes/web.php
   </code>
 </pre>
 
+Passo 13:
 Sempre ao criar  uma nova rota , deverá se removido cache das rotas , use  o comando a seguir
 
 <pre class="language-php">
