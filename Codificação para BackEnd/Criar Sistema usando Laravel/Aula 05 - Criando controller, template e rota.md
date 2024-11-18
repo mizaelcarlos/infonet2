@@ -2,7 +2,7 @@ para criar um controller use o comando abaixo
 
 <pre class="language-php">
   <code class="language-php">
-    php artisan make:controller ProdutoController
+    php artisan make:controller ProdutoController --resource
   </code>
 </pre>
 
