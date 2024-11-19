@@ -368,7 +368,7 @@ Passo 15:
 
 Agora altere o template views/cliente/index.blade.php
 
-<body>
+
     <h1>Listagem de clientes</h1>
     <table>
         <thead>
@@ -386,5 +386,5 @@ Agora altere o template views/cliente/index.blade.php
             @endforeach
         </tbody>
     </table>
-</body>
+
 
