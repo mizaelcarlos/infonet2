@@ -282,3 +282,109 @@ Sempre ao criar  uma nova rota , deverá se removido cache das rotas , use  o co
     php artisan route:cache
   </code>
 </pre>
+
+Passo 14:
+
+Listar os clientes no template cliente.index
+
+Altere o método index do arquivo Models/ClienteController.php
+
+<pre class="language-php">
+  <code class="language-php">
+
+	namespace App\Http\Controllers;
+	
+	use Illuminate\Http\Request;
+	use App\Models\Cliente;
+	
+	class ClienteController extends Controller
+	{
+	    /**
+	     * Display a listing of the resource.
+	     * Lista os registros de clientes
+	     */
+	    public function index()
+	    {
+	        $clientes = Cliente::all();
+	        //return view('cliente.index',['clientes' => $clientes]);
+	        return view('cliente.index',compact('clientes'));
+	    }
+	
+	    /**
+	     * Show the form for creating a new resource.
+	     * Renderiza o template com o fomurlário de cadastro de cliente
+	     */
+	    public function create()
+	    {
+	        return view('cliente.cadastrar');
+	    }
+	
+	    /**
+	     * Store a newly created resource in storage.
+	     */
+	    public function store(Request $request)
+	    {
+	        $cliente = Cliente::create($request->all());
+	        return redirect()->route('cliente.index');
+	    }
+	
+	    /**
+	     * Display the specified resource.
+	     */
+	    public function show(string $id)
+	    {
+	        //
+	    }
+	
+	    /**
+	     * Show the form for editing the specified resource.
+	     */
+	    public function edit(string $id)
+	    {
+	        //
+	    }
+	
+	    /**
+	     * Update the specified resource in storage.
+	     */
+	    public function update(Request $request, string $id)
+	    {
+	        //
+	    }
+	
+	    /**
+	     * Remove the specified resource from storage.
+	     */
+	    public function destroy(string $id)
+	    {
+	        //
+	    }
+	}
+
+  </code>
+</pre>
+
+Passo 15:
+
+Agora altere o template views/cliente/index.blade.php
+
+<body>
+    <h1>Listagem de clientes</h1>
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Data de Nascimento</th>
+        </thead>
+        <tbody>
+            @foreach($clientes as $cliente)
+                <tr>
+                    <td>{{ $cliente->id }}</td>
+                    <td>{{ $cliente->nome }}</td>
+                    <td>{{ $cliente->data_nascimento }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+</body>
+
