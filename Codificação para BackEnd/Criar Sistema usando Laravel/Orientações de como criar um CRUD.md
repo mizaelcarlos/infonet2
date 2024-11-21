@@ -415,20 +415,29 @@ após isso insira uma nova rota no arquivo routes/web.php, conforme abaixo:
 
 Após isso insira o código no template views/cliente/index.php
 
-<tbody>
-    @foreach($clientes as $cliente)
-	<tr>
-	    <td>{{ $cliente->id }}</td>
-	    <td>{{ $cliente->nome }}</td>
-	    <td>{{ $cliente->data_nascimento }}</td>
-	    <td>
-		<form action="{{ route('cliente.excluir' , $cliente->id)}}" method="POST">
-		    @csrf
-		    @method('DELETE')
-		    <button type="submit" onclick="return confirm('Deseja realmente excluir esse cliente?')">Excluir</button>
+<h1>Listagem de clientes</h1>
+    <table border="1">
+        <thead>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Data de Nascimento</th>
+            <th>Opções</th>
+        </thead>
+        <tbody>
+            @foreach($clientes as $cliente)
+                <tr>
+                    <td>{{ $cliente->id }}</td>
+                    <td>{{ $cliente->nome }}</td>
+                    <td>{{ $cliente->data_nascimento }}</td>
+                    <td>
+                        <form action="{{ route('cliente.excluir' , $cliente->id)}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" onclick="return confirm('Deseja realmente excluir esse cliente?')">Excluir</button>
 
-		</form>
-	    </td>
-	</tr>
-    @endforeach
-</tbody>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
