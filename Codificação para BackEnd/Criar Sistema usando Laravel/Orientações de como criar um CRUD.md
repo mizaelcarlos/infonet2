@@ -415,6 +415,7 @@ após isso insira uma nova rota no arquivo routes/web.php, conforme abaixo:
 
 Após isso insira o código no template views/cliente/index.php
 
+```html
 <h1>Listagem de clientes</h1>
     <table border="1">
         <thead>
