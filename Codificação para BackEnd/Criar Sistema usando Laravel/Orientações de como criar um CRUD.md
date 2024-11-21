@@ -387,4 +387,48 @@ Agora altere o template views/cliente/index.blade.php
         </tbody>
     </table>
 
+Passo 16:
 
+Para excluir registro de cliente.
+
+Edite o método destroy da classe ClienteController.php
+
+<pre class="language-php">
+  <code class="language-php">
+    	public function destroy(string $id)
+	    {
+	        $cliente = Cliente::find($id);
+	        $cliente->delete();
+	
+	        return redirect()->route('cliente.index');
+	    }
+  </code>
+</pre>
+
+após isso insira uma nova rota no arquivo routes/web.php, conforme abaixo:
+
+<pre class="language-php">
+  <code class="language-php">
+    	Route::delete('/cliente/excluir/{id}',[ClienteController::class,'destroy'])->name('cliente.excluir');
+  </code>
+</pre>
+
+Após isso insira o código no template views/cliente/index.php
+
+<tbody>
+    @foreach($clientes as $cliente)
+	<tr>
+	    <td>{{ $cliente->id }}</td>
+	    <td>{{ $cliente->nome }}</td>
+	    <td>{{ $cliente->data_nascimento }}</td>
+	    <td>
+		<form action="{{ route('cliente.excluir' , $cliente->id)}}" method="POST">
+		    @csrf
+		    @method('DELETE')
+		    <button type="submit" onclick="return confirm('Deseja realmente excluir esse cliente?')">Excluir</button>
+
+		</form>
+	    </td>
+	</tr>
+    @endforeach
+</tbody>
