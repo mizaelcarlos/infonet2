@@ -442,3 +442,87 @@ Após isso insira o código no template views/cliente/index.php
             @endforeach
         </tbody>
     </table>
+
+Passo 17: Criar funcionalidade de editar cliente
+
+Edite o método edit e update da classe ClienteController.php
+
+<pre class="language-php">
+  <code class="language-php">
+	public function edit(string $id)
+	    {
+	        $cliente = Cliente::find($id);	
+	        return redirect()->route('cliente.index',compact('cliente');
+	    }
+
+	public function update(Request $request, string $id)
+	    {
+	        $cliente = Cliente::find($id);
+	        $cliente->update($request->all());
+	
+	        return redirect()->route('cliente.index');
+	    }
+  </code>
+</pre>
+
+após isso insira uma nova rota no arquivo routes/web.php, conforme abaixo:
+
+<pre class="language-php">
+  <code class="language-php">
+    	Route::get('cliente/editar/{id}',[ClienteController::class,'edit'])->name('cliente.edit');
+	Route::put('cliente/atualizar/{id}',[ClienteController::class,'update'])->name('cliente.update');
+  </code>
+</pre>
+
+Após isso edite o código no template views/cliente/index.blade.php inserindo a coluna para mostrar o botão editar
+
+```html
+<h1>Listagem de clientes</h1>
+    <table border="1">
+        <thead>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Data de Nascimento</th>
+            <th>Opções</th>
+        </thead>
+        <tbody>
+            @foreach($clientes as $cliente)
+                <tr>
+                    <td>{{ $cliente->id }}</td>
+                    <td>{{ $cliente->nome }}</td>
+                    <td>{{ $cliente->data_nascimento }}</td>
+                    <td>
+                        <form action="{{ route('cliente.excluir' , $cliente->id)}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" onclick="return confirm('Deseja realmente excluir esse cliente?')">Excluir</button>
+
+                        </form>
+                    </td>
+		    <td><button><a href="{{ route('cliente.edit', $cliente->id) }}">Editar</a></button></td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+
+Após isso crie o arquivo de template views/cliente/editar.blade.php e coloque o seguinte conteudo
+```html
+<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Document</title>
+		</head>
+		<body>
+			<form action="{{ route('cliente.update' , $cliente->id) }}" method="post">
+				@csrf
+				<label for="">Nome</label>    
+				<input type="text" name="nome" id="nome" value="$cliente->nome">
+				<label for=""<Data de Nascimento</label>
+				<input type="date" name="data_nascimento" id="data_nascimento" value="$cliente->data_nascimento">
+				<label for="">Foto</label>
+				<input type="text" name="foto" id="foto">
+				
+				<button type="submit">Salvar</button>
+			</form>
+		</body>
+
