@@ -12,7 +12,7 @@ Para criar o banco , utilize o comando SQL abaixo:
 
 <pre class="language-php">
   <code class="language-php">
-  CREATE DATABASE sistema_os;
+  CREATE DATABASE blog;
   </code>
 </pre>
 
