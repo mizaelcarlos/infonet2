@@ -4,7 +4,7 @@ Onde sistema_os será o nome do projeto
 
 <pre class="language-php">
   <code class="language-php">
-  composer create-project laravel/laravel blog
+  composer create-project laravel/laravel sistema_os
   </code>
 </pre>
 
