@@ -81,7 +81,7 @@ Após isso , vamos alterar o nosso método store do arquivo App/PostController.p
   </code>
 </pre>
 
-Para exibir a foto no template basta chamar o objeto seguido do atributo foto dentro do comando asset, conforme abaixo:
+Para exibir a foto no template basta chamar o objeto seguido do atributo foto dentro do comando asset, concatenando com a pasta storage/, conforme abaixo:
 
     src="{{ asset('storage/'.$post->foto)}}"  
 
