@@ -4,7 +4,6 @@ Crie uma pasta chamada layouts dentro de resources/views.
 Após isso crie um arquivo chamado app.blade.php dentro da pasta layouts, com o seguinte conteúdo:
 
 
-	```html
 
 	<html lang="en">
 	<head>
