@@ -60,6 +60,18 @@ Após isso , rode o seguinte comando abaixo, para criar um link simbólico para 
 Após isso , vamos editar o nosso arquivo resources/views/post/cadastrar.blade.php inserind o input abaixo:
 
  <input type="file" name="foto">
+ 
+Agora vamos alterar o nosso arquivo App/Models/Post.php e inserir a coluna foto nos campos prenchiveis:
+
+<pre class="language-php">
+  <code class="language-php">
+
+    protected $fillable = ['titulo','conteudo', 'foto'];
+ 
+  </code>
+</pre>
+
+
 
 Após isso , vamos alterar o nosso método store do arquivo App/PostController.php, colocando o conteúdo abaixo:
 
