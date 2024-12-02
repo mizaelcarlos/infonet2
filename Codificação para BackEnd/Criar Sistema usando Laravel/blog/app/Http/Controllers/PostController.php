@@ -30,7 +30,13 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        Post::create($request->all());
+        $foto = $request->foto->store('fotos','public');
+        // //Post::create($request->all());
+        Post::create([
+            'titulo' => $request->titulo,
+            'conteudo' => $request->conteudo,
+            'foto' => $foto
+        ]);
         return redirect()->route('post.index');
     }
 
