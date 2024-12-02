@@ -5,26 +5,22 @@ Após isso crie um arquivo chamado app.blade.php dentro da pasta layouts, com o 
 
 <pre class="language-php">
   <code class="language-php">
-	```HTML
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <title>Document</title>
-</head>
-<body>
-    <h1 class="text-center">Bem vindo ao meu blog</h1>
-    <div class="container">
-        @yield('content')
-    </div>
-    <footer>
-        <p class="text-center">{{ date('Y') }} - Meu Blog</p>
-    </footer>
-</body>
-</html>
+	
+		<head>
+		    <meta charset="UTF-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+		    <title>Document</title>
+		</head>
+		<body>
+		    <h1 class="text-center">Bem vindo ao meu blog</h1>
+		    <div class="container">
+		        @yield('content')
+		    </div>
+		    <footer>
+		        <p class="text-center">{{ date('Y') }} - Meu Blog</p>
+		    </footer>
+		</body>
   </code>
 </pre>
 
