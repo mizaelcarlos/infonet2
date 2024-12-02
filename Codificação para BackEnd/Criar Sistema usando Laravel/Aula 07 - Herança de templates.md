@@ -5,7 +5,7 @@ Após isso crie um arquivo chamado app.blade.php dentro da pasta layouts, com o 
 
 <pre class="language-php">
   <code class="language-php">
-	´´´HTML
+	```HTML
 
 <!DOCTYPE html>
 <html lang="en">
