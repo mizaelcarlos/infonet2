@@ -63,8 +63,14 @@ class PostController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $foto = $request->foto->store('fotos','public');
+
         $post = Post::find($id);
-        $post->update($request->all());
+        $post->update([
+            'titulo' => $request->titulo,
+            'conteudo' => $request->conteudo,
+            'foto' => $foto
+        ]);
         return redirect()->route('post.index');   
     }
 
