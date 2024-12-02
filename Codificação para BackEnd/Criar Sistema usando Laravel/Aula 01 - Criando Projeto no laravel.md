@@ -4,19 +4,15 @@ Onde sistema_os será o nome do projeto
 
 <pre class="language-php">
   <code class="language-php">
-  composer create-project laravel/laravel sistema_os
+  composer create-project laravel/laravel blog
   </code>
 </pre>
 
 
+
+Execute o terminal na pasta do projeto criado 
 
 Para iniciar o servidor, execute o seguinte comando, que roda o servidor de aplicativos na porta 8000:
-
-<pre class="language-php">
-  <code class="language-php">
-  cd sistema_os
-  </code>
-</pre>
 
 <pre class="language-php">
   <code class="language-php">
@@ -32,7 +28,7 @@ Você deverá ver a tela a seguir:
 
 para fazer conexão do banco de dados com o projeto , edite as seguinte informações do arquivo .env abaixo:
 
-Crie o banco de dados no mysql com o nome sistema_os
+Crie o banco de dados no mysql com o nome blog
 
 <pre class="language-php">
   <code class="language-php">
