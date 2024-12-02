@@ -3,8 +3,7 @@ Para trabalhar com herança de templates no laravel, faça os passos a seguir:
 Crie uma pasta chamada layouts dentro de resources/views.
 Após isso crie um arquivo chamado app.blade.php dentro da pasta layouts, com o seguinte conteúdo:
 
-<pre class="language-php">
-  <code class="language-php">
+
 	```html
 
 	<html lang="en">
@@ -24,7 +23,5 @@ Após isso crie um arquivo chamado app.blade.php dentro da pasta layouts, com o 
 	    </footer>
 	</body>
 	</html>
-  </code>
-</pre>
 
 
