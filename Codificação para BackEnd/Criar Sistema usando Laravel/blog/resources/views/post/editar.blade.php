@@ -18,6 +18,7 @@
         <div class="mb-3">
             <label for="" class="form-label">Foto</label>
             <input type="file" name="foto">
+            <img src="{{ asset('storage/'.$post->foto)}}" alt="">
         </div>
         <button id="btnCadastrar" type="submit" class="btn btn-primary">Salvar</button>
     </form>
