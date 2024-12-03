@@ -22,9 +22,7 @@ Vamos alterar o nosso método update do arquivo App/Http/PostController.php, col
 Após isso , altere o formulario do arquivo resources/views/post/editar.blade.php com o conteúdo abaixo, lembrando que ele está usando herança de templates.
 
 
-@extends('layouts.app')
 
-@section('content') 
     <form action="{{ route('post.update', $post->id) }}" method="post" enctype="multipart/form-data">
         @csrf
         @method('PUT')
@@ -45,4 +43,3 @@ Após isso , altere o formulario do arquivo resources/views/post/editar.blade.ph
         </div>
         <button id="btnCadastrar" type="submit" class="btn btn-primary">Salvar</button>
     </form>
-@endsection
