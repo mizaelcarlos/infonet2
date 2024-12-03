@@ -66,6 +66,7 @@ class PostController extends Controller
         $foto = $request->foto->store('fotos','public');
 
         $post = Post::find($id);
+
         $post->update([
             'titulo' => $request->titulo,
             'conteudo' => $request->conteudo,
