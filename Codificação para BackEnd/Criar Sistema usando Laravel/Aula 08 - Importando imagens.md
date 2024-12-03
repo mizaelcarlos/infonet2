@@ -73,7 +73,7 @@ Agora vamos alterar o nosso arquivo App/Models/Post.php e inserir a coluna foto 
 
 
 
-Após isso , vamos alterar o nosso método store do arquivo App/PostController.php, colocando o conteúdo abaixo:
+Após isso , vamos alterar o nosso método store do arquivo App/Http/PostController.php, colocando o conteúdo abaixo:
 
 <pre class="language-php">
   <code class="language-php">
