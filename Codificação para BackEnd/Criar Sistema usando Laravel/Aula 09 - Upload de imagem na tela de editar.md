@@ -42,4 +42,4 @@ Após isso , altere o formulario do arquivo resources/views/post/editar.blade.ph
             <img src="{{ asset('storage/'.$post->foto)}}" alt="">
         </div>
         <button id="btnCadastrar" type="submit" class="btn btn-primary">Salvar</button>
-    </form>@endsection
+    </form>
