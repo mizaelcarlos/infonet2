@@ -12,7 +12,7 @@
         
         <div class="mb-3">
             <label for="conteudo" class="form-label">Conteúdo</label>
-            <textarea name="conteudo_enviado" id="conteudo" class="form-control form-control-lg" rows="5">{{ $post->conteudo }}</textarea>
+            <textarea name="conteudo" id="conteudo" class="form-control form-control-lg" rows="5">{{ $post->conteudo }}</textarea>
         </div>
         
         <div class="mb-3">
