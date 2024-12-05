@@ -26,6 +26,24 @@ Em seguida basta clicar com botão direito em cima da conexão e depois em atuli
 
 A partir daí, teremos um banco de dados chamado sistema_os para poder usar no nosso projeto  usando LARAVEL.
 
+para fazer conexão do banco de dados com o projeto , edite as seguinte informações do arquivo .env abaixo:
+
+Crie o banco de dados no mysql com o nome blog
+
+<pre class="language-php">
+  <code class="language-php">
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=sistema_os
+    DB_USERNAME=root
+    DB_PASSWORD=
+  </code>
+</pre>
+
+
+lembrando que as configurações acima estão relacionadas ao SGBD MYSQL
+
 
 
 

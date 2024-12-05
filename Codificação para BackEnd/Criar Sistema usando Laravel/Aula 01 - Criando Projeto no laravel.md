@@ -26,23 +26,7 @@ Você deverá ver a tela a seguir:
 ![image](https://github.com/user-attachments/assets/75f6d671-dc91-403a-933d-c7df21b636fb)
 
 
-para fazer conexão do banco de dados com o projeto , edite as seguinte informações do arquivo .env abaixo:
 
-Crie o banco de dados no mysql com o nome blog
-
-<pre class="language-php">
-  <code class="language-php">
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=sistema_os
-    DB_USERNAME=root
-    DB_PASSWORD=
-  </code>
-</pre>
-
-
-lembrando que as configurações acima estão relacionadas ao SGBD MYSQL
 
 
 
