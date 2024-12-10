@@ -12,8 +12,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
-        // $posts = Post::with('comentarios')->get();
+
+        $posts = Post::with('comentarios')->get();
         return view('post.index',compact('posts'));
     }
 

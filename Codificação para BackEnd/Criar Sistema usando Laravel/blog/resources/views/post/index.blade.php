@@ -11,6 +11,9 @@
                         <div class="card-body">
                             <h5 class="card-title">{{$post->titulo}}</h5>
                             <p class="card-text">{{$post->conteudo}}</p>
+                            @foreach($post->comentarios as $comentario)
+                                <p>{{ $comentario->texto }}</p>
+                            @endforeach
                            
                             <form action="{{route('post.destroy', $post->id)}}" method="post">
                                 @csrf
@@ -19,11 +22,11 @@
                             </form> 
                             <button type="button" class="btn btn-success"><a href="{{ route('post.edit', $post->id) }}">Editar</a></button>
                             <button type="button" class="btn btn-success"><a href="{{ route('post.show', $post->id) }}">Visualizar</a></button>
-                            <button type="button" data-toggle="modal" data-target="#modalExemplo">
+                            <button type="button" data-toggle="modal" data-target="#modalExemplo{{ $post->id }}">
                                 <img src="{{ asset('storage/icones/comentario.png') }}" alt="">
                             </button>
 
-                            <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="modalExemplo{{ $post->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                 <div class="modal-header">
@@ -32,15 +35,19 @@
                                     <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body">
-                                    <form action="" method="post">
-                                        <textarea name="texto" id="texto" rows="5" cols="60"></textarea>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
-                                </div>
+                                <form action="{{ route('comentario.salvar') }}" method="post">
+                                    @csrf
+                                    <div class="modal-body">
+                                    
+                                            <textarea name="texto" id="texto" rows="5" cols="60"></textarea>
+                                            <input type="hidden" name="post_id" value="{{ $post->id }}">
+                                    
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                        <button type="submit" class="btn btn-primary">Salvar</button>
+                                    </div>
+                                </form>
                                 </div>
                             </div>
                             </div>
