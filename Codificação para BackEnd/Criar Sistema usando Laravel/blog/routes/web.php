@@ -23,3 +23,6 @@ Route::get('categorias/',[CategoriaController::class,'index'])->name('categoria.
 Route::get('categorias/cadastrar',[CategoriaController::class,'create'])->name('categoria.cadastrar');
 Route::post('categoria/salvar',[CategoriaController::class,'store'])->name('categoria.store');
 Route::get('categoria/visualizar/{id}',[CategoriaController::class,'show'])->name('categoria.show');
+Route::get('categoria/editar/{id}',[CategoriaController::class,'edit'])->name('categoria.edit');
+Route::put('categoria/atualizar/{id}',[CategoriaController::class,'update'])->name('categoria.update');
+Route::delete('categoria/excluir/{id}',[CategoriaController::class,'destroy'])->name('categoria.destroy');
