@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ComentarioController;
+use App\Http\Controllers\CategoriaController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -16,3 +18,8 @@ Route::get('post/editar/{id}',[PostController::class,'edit'])->name('post.edit')
 Route::put('post/atualizar/{id}',[PostController::class,'update'])->name('post.update');
 Route::get('post/visualizar/{id}',[PostController::class,'show'])->name('post.show');
 Route::post('comentario/salvar',[ComentarioController::class,'store'])->name('comentario.salvar');
+
+Route::get('categorias/',[CategoriaController::class,'index'])->name('categoria.index');
+Route::get('categorias/cadastrar',[CategoriaController::class,'create'])->name('categoria.cadastrar');
+Route::post('categoria/salvar',[CategoriaController::class,'store'])->name('categoria.store');
+Route::get('categoria/visualizar/{id}',[CategoriaController::class,'show'])->name('categoria.show');
