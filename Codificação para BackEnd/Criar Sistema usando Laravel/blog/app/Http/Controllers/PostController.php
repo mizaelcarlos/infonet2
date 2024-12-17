@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Categoria;
 
 class PostController extends Controller
 {
@@ -12,7 +13,6 @@ class PostController extends Controller
      */
     public function index()
     {
-
         $posts = Post::with('comentarios')->get();
         return view('post.index',compact('posts'));
     }
@@ -22,8 +22,8 @@ class PostController extends Controller
      */
     public function create()
     {
-
-        return view('post.cadastrar');
+        $categorias = Categoria::all();
+        return view('post.cadastrar',compact('categorias'));
     }
 
     /**
@@ -36,7 +36,8 @@ class PostController extends Controller
         Post::create([
             'titulo' => $request->titulo,
             'conteudo' => $request->conteudo,
-            'foto' => $foto
+            'foto' => $foto,
+            'categoria_id' => $request->categoria_id
         ]);
         return redirect()->route('post.index');
     }

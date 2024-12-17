@@ -10,6 +10,14 @@
             <label for="titulo" class="form-label">Título</label>
             <input type="text" name="titulo" id="titulo" class="form-control form-control-lg">
         </div>
+
+        <div class="mb-3">
+            <select name="categoria_id" id="categoria_id" >
+                @foreach($categorias as $categoria)
+                <option value="{{ $categoria->id}}">{{ $categoria->nome }}</option>
+                @endforeach
+            </select>
+        </div>
         
         <div class="mb-3">
             <label for="conteudo" class="form-label">Conteúdo</label>

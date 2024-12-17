@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class="text-center">Bem vindo ao meu blog</h1>
+    <h1 class="text-center">Laravel 11 na prática</h1>
     <div class="container">
         @yield('content')
     </div>
