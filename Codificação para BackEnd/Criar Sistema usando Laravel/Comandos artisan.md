@@ -47,11 +47,19 @@ Cria Model
   </code>
 </pre>
 
-Cria migration
+Cria migration para criar tabela
 
 <pre class="language-php">
   <code class="language-php">
-  php artisan make:migration create_minhatabela_table table=minhatabela
+  php artisan make:migration create_nome_da_tabela --create=nome_da_tabela
+  </code>
+</pre>
+
+Cria migration para alterar tabela
+
+<pre class="language-php">
+  <code class="language-php">
+  php artisan make:migration alter_nome_da_tabela --table=nome_da_tabela
   </code>
 </pre>
 
