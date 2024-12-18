@@ -57,7 +57,8 @@ class PostController extends Controller
     public function edit(string $id)
     {
         $post = Post::find($id);
-        return view('post.editar',compact('post'));
+        $categorias = Categoria::all();
+        return view('post.editar',compact('post','categorias'));
     }
 
     /**
@@ -72,7 +73,8 @@ class PostController extends Controller
         $post->update([
             'titulo' => $request->titulo,
             'conteudo' => $request->conteudo,
-            'foto' => $foto
+            'foto' => $foto,
+            'categoria_id' => $request->categoria_id
         ]);
         return redirect()->route('post.index');   
     }
