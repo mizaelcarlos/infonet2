@@ -1,5 +1,5 @@
 
-    
+
 @extends('layouts.app')
 
 @section('content')
@@ -18,12 +18,20 @@
                 @endforeach
             </select>
         </div>
-        
+
+        <div class="mb-3">
+            <label for="">Tag</label>
+            @foreach ($tags as $tag)
+                <input type="checkbox" name="tags[]" id="" value="{{ $tag->id }}">
+                <label for="">{{ $tag->nome }}</label>
+            @endforeach
+        </div>
+
         <div class="mb-3">
             <label for="conteudo" class="form-label">Conteúdo</label>
             <textarea name="conteudo" id="conteudo" class="form-control form-control-lg" rows="5"></textarea>
         </div>
-        
+
         <div class="mb-3">
             <label for="" class="form-label">Foto</label>
             <input type="file" name="foto" id="foto">
@@ -42,7 +50,7 @@
                 event.preventDefault();
             }
         });
-       
-        
+
+
     </script>
     @endsection

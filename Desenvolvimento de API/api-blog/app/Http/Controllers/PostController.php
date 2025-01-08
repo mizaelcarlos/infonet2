@@ -15,7 +15,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::with('comentarios')->get();
-        return view('post.index',compact('posts'));
+        return response()->json($posts, 201);
     }
 
     /**
@@ -53,7 +53,7 @@ class PostController extends Controller
     public function show(string $id)
     {
         $post = Post::find($id);
-        return view('post.visualizar',compact('post'));
+        return response()->json($post, 201);
     }
 
     /**

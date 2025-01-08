@@ -26,9 +26,23 @@
         
         <div class="mb-3">
             <label for="" class="form-label">Foto</label>
-            <input type="file" name="foto">
+            <input type="file" name="foto" value="$post->foto">
             <img src="{{ asset('storage/'.$post->foto)}}" alt="" style="width: 100px; heigth: 100px;">
         </div>
         <button id="btnCadastrar" type="submit" class="btn btn-primary">Salvar</button>
     </form>
+    <script>
+        var foto = document.getElementById('foto')
+        var formCadastrarPost = document.getElementById('formCadastrarPost')
+
+        formCadastrarPost.addEventListener("submit", function(event) {
+
+            if((!foto.files || !foto.files[0]) && foto.value != ''){
+                alert('Foto obrigatória!')
+                event.preventDefault();
+            }
+        });
+       
+        
+    </script>
 @endsection
