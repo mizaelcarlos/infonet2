@@ -1,4 +1,4 @@
-## As orientações abaixo deverão ser seguidas no prpojeto api-blog
+## As orientações abaixo deverão ser seguidas no projeto api-blog
 
 ### Faça uma cópia do arquivo .env e o arquivo .env copy renomeie para .env.testing   
 
