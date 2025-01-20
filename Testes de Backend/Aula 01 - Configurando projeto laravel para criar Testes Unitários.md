@@ -1,4 +1,6 @@
-### Copie o arquivo .env e o arquivo .env copy renomeie para .env.testing   
+## As orientações abaixo deverão ser seguidas no prpojeto api-blog
+
+### Faça uma cópia do arquivo .env e o arquivo .env copy renomeie para .env.testing   
 
 ### Gere novas para o arquivo .env.testing usando o comando abaixo:
 
