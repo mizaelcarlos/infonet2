@@ -2,6 +2,14 @@
 
 ### Faça uma cópia do arquivo .env e o arquivo .env copy renomeie para .env.testing   
 
+### Limpe o cache das configurações 
+<pre class="language-php">
+  <code class="language-php">
+  php artisan config:clear
+  php artisan cache:clear
+  </code>
+</pre>
+
 ### Gere novas para o arquivo .env.testing usando o comando abaixo:
 
 <pre class="language-php">
