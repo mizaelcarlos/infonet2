@@ -6,6 +6,7 @@
 <pre class="language-php">
   <code class="language-php">
   php artisan config:clear
+  php artisan config:cache
   php artisan cache:clear
   </code>
 </pre>
