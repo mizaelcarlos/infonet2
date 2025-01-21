@@ -45,6 +45,16 @@
   </code>
 </pre>
 
+### Copiar arquivos de migrations do projeto blog para o projeto api-blog
+
+### Limpe o cache das configurações 
+<pre class="language-php">
+  <code class="language-php">
+    php artisan migrate --env=testing 
+  </code>
+</pre>
+
+
 
 
 
