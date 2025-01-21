@@ -39,8 +39,9 @@
 ### Limpe o cache das configurações 
 <pre class="language-php">
   <code class="language-php">
-  php artisan config:clear
-  php artisan cache:clear
+   php artisan config:clear
+   php artisan config:cache
+   php artisan cache:clear
   </code>
 </pre>
 
