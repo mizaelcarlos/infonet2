@@ -1,7 +1,12 @@
 ## As orientações abaixo deverão ser seguidas no projeto api-blog
 
 ### Faça uma cópia do arquivo .env e o arquivo .env copy renomeie para .env.testing   
-
+### Aletere a linha abaixo de APP_ENV=local para APP_ENV=testing
+<pre class="language-php">
+  <code class="language-php">
+	APP_ENV=testing
+  </code>
+</pre>
 ### Limpe o cache das configurações 
 <pre class="language-php">
   <code class="language-php">
