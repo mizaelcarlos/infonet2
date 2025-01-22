@@ -1,6 +1,6 @@
 ## As orientações abaixo deverão ser seguidas no projeto api-blog
 
-### Vamos implementar o segundo teste ,para testar o método store do CategoriaController
+### Vamos implementar o segundo teste ,para testar o método store do CategoriaController, abra o arquivo teste/features/CategoriaControllerTest.php
 ### Crie o método abaixo com o seguinte conteúdo
 <pre class="language-php">
   <code class="language-php">
@@ -33,7 +33,7 @@
   </code>
 </pre>
 
-### Vamos implementar o terceiro teste ,para testar o método update do CategoriaController
+### Vamos implementar o terceiro teste ,para testar o método update do CategoriaController,  abra o arquivo teste/features/CategoriaControllerTest.php
 ### Crie o método abaixo com o seguinte conteúdo
 <pre class="language-php">
   <code class="language-php">
@@ -91,6 +91,7 @@
 
 ### Deverá ser mostrado algo semelhante a tela abaixo
 
+![image](https://github.com/user-attachments/assets/fcffa058-e8c7-4fa8-891d-5b55c4279697)
 
 
 
