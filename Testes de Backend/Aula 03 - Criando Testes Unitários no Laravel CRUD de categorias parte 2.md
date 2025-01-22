@@ -32,6 +32,30 @@
     }
   </code>
 </pre>
+### No terminal dentro da pasta do projeto rode o seguinte comando:
+
+<pre class="language-php">
+  <code class="language-php">
+ 	php artisan make:factory CategoriaFactory
+  </code>
+</pre>
+
+### Será criado uma classe chamada CategoriaFactory dentro de databases/factories/ para criar categorias fakes no banco de dados
+### Insira o seguinte conteudo nessa classe
+
+<pre class="language-php">
+  <code class="language-php">
+ 	    public function definition(): array
+	    {
+	        return [
+	            'nome' => $this->faker->word,
+	            'descricao' => $this->faker->sentence,
+	        ];
+	    }
+  </code>
+</pre>
+
+
 
 ### Vamos implementar o terceiro teste ,para testar o método update do CategoriaController,  abra o arquivo teste/features/CategoriaControllerTest.php
 ### Crie o método abaixo com o seguinte conteúdo
