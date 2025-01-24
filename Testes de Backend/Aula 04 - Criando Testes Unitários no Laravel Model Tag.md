@@ -84,6 +84,7 @@
 
 ### Deverá ser mostrado algo semelhante a tela abaixo
 
+![image](https://github.com/user-attachments/assets/a8ee6326-779e-451a-9634-40f0f8d9d985)
 
 
 
